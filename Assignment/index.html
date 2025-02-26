@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Galerija</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .gallery {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+        .gallery-item {
+            background-color: #007BFF;
+            padding: 15px;
+            border-radius: 8px;
+            color: white;
+            text-align: center;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 480px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Galerija slika</h1>
+        <p>Ovo je responsive galerija sa thumb slikama i nazivima.</p>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="placeholder-image.png" alt="Slika 1">
+                <p>Slika 1</p>
+            </div>
+            <div class="gallery-item">
+                <img src="placeholder-image.png" alt="Slika 2">
+                <p>Slika 2</p>
+            </div>
+            <div class="gallery-item">
+                <img src="placeholder-image.png" alt="Slika 3">
+                <p>Slika 3</p>
+            </div>
+            <div class="gallery-item">
+                <img src="placeholder-image.png" alt="Slika 4">
+                <p>Slika 4</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+        
